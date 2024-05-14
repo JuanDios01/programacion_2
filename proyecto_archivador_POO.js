@@ -55,7 +55,7 @@ class Viaje {
     calcularPrecioViaje() {
         const impuesto = this.vehiculo.calcularImpuesto();
         const costoTransporte = this.distancia * this.precioKg * this.vehiculo.toneladasCarga;
-        const total = costoTransporte * (1 + impuesto);
+        const total = costoTransporte * impuesto;
         const comision = this.vehiculo.calcularComision(this.distancia);
         return total + comision;
     }
